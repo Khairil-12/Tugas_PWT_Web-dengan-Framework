@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bioskop - Cinestars</title>
+    <title>Login - Cinestars</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -13,26 +13,23 @@
       </div>
       <div class="nav-menu">
         <a href="index.html" class="nav-item">Home</a>
-        <a href="bioskop.html" class="nav-item active">Bioskop</a>
+        <a href="bioskop.html" class="nav-item">Bioskop</a>
         <a href="film.html" class="nav-item">Film</a>
         <a href="food.html" class="nav-item">m.food</a>
         <a href="sewa.html" class="nav-item">Sewa Tempat</a>
-        <a href="login.html" class="nav-item login-btn">Login</a>
+        <a href="login.html" class="nav-item active login-btn">Login</a>
       </div>
     </nav>
 
-    <div class="search-container">
-      <input
-        type="text"
-        placeholder="Cari bioskop terdekat..."
-        class="search-input"
-      />
-    </div>
-
     <main class="main-content">
-      <h2>Daftar Bioskop Cinestars</h2>
-      <div class="cinema-list">
-        <!-- Daftar bioskop akan ditampilkan di sini -->
+      <div class="login-container">
+        <h2>Login ke Cinestars</h2>
+        <form class="login-form">
+          <input type="email" placeholder="Email" required />
+          <input type="password" placeholder="Password" required />
+          <button type="submit" class="login-btn">Login</button>
+        </form>
+        <p>Belum punya akun? <a href="#">Daftar di sini</a></p>
       </div>
     </main>
 

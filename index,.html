@@ -3,187 +3,88 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CineMax - Bioskop Premium</title>
-    <!-- Bootstrap 5 CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Custom CSS -->
+    <title>Cinestars - Feel the movies beyond</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
   </head>
-  <body class="bg-gray-900 text-white font-sans">
-    <!-- Navigation -->
-    <nav
-      class="navbar navbar-expand-lg navbar-dark fixed-top bg-gray-900/95 backdrop-blur-sm"
-    >
+  <body>
+    <!-- Header -->
+    <header class="header">
       <div class="container">
-        <a
-          class="navbar-brand flex items-center text-red-600 font-bold text-xl"
-          href="index.html"
-        >
-          <i class="fas fa-film mr-2"></i>CineMax
-        </a>
-        <button
-          class="navbar-toggler border-0"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <i class="fas fa-bars text-white"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav me-auto space-x-2">
-            <li class="nav-item">
-              <a
-                class="nav-link active text-white hover:text-red-500 transition-colors"
-                href="index.html"
-                >Beranda</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link text-white hover:text-red-500 transition-colors"
-                href="film.html"
-                >Film</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link text-white hover:text-red-500 transition-colors"
-                href="bioskop.html"
-                >Bioskop</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link text-white hover:text-red-500 transition-colors"
-                href="food.html"
-                >Makanan</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link text-white hover:text-red-500 transition-colors"
-                href="sewa.html"
-                >Sewa Tempat</a
-              >
-            </li>
-          </ul>
-          <div class="flex items-center space-x-3">
-            <button
-              class="btn-login bg-transparent border border-white text-white px-4 py-2 rounded-lg hover:bg-white hover:text-gray-900 transition-colors"
-            >
-              <i class="fas fa-user mr-2"></i>Masuk
-            </button>
-            <button
-              class="btn-register bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors"
-            >
-              <i class="fas fa-user-plus mr-2"></i>Daftar
-            </button>
-            <button
-              class="btn-cart bg-yellow-500 text-gray-900 px-4 py-2 rounded-lg hover:bg-yellow-600 transition-colors relative"
-            >
-              <i class="fas fa-shopping-cart"></i>
-              <span
-                class="cart-count absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center"
-                >0</span
-              >
-            </button>
+        <div class="header-top">
+          <div class="logo">
+            <h1><i class="fas fa-star"></i> CINESTARS</h1>
+            <span class="tagline">Feel the movies beyond</span>
+          </div>
+          <div class="user-actions">
+            <a href="login.html" class="btn-login">
+              <i class="fas fa-user"></i> LOGIN
+            </a>
+            <a href="#" class="btn-location">
+              <i class="fas fa-map-marker-alt"></i> JAKARTA
+            </a>
           </div>
         </div>
-      </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section
-      class="hero-section min-h-screen flex items-center relative overflow-hidden"
-    >
-      <div
-        class="absolute inset-0 bg-gradient-to-r from-gray-900 to-gray-900/70 z-10"
-      ></div>
-      <div
-        class="hero-bg absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style="
-          background-image: url('https://images.unsplash.com/photo-1489599804159-c05e4b9c4e39?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
-        "
-      ></div>
-
-      <div class="container relative z-20">
-        <div class="row items-center">
-          <div class="col-lg-6">
-            <div class="hero-content text-white">
-              <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                Nikmati Pengalaman
-                <span class="text-red-600">Menonton Terbaik</span>
-              </h1>
-              <p class="text-xl mb-8 text-gray-300 leading-relaxed">
-                Dengan teknologi terkini dan kenyamanan maksimal, saksikan
-                film-film terbaru hanya di CineMax. Dilengkapi dengan Dolby
-                Atmos dan kursi premium.
-              </p>
-              <div class="flex flex-col sm:flex-row gap-4">
-                <a
-                  href="film.html"
-                  class="btn-primary bg-red-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-red-700 transition-colors text-center"
-                >
-                  <i class="fas fa-ticket-alt mr-2"></i>Beli Tiket Sekarang
-                </a>
-                <a
-                  href="#now-playing"
-                  class="btn-secondary border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors text-center"
-                >
-                  <i class="fas fa-play-circle mr-2"></i>Lihat Film
-                </a>
-              </div>
-            </div>
+        <nav class="navbar">
+          <div class="nav-menu">
+            <a href="index.html" class="nav-item active">
+              <i class="fas fa-home"></i> HOME
+            </a>
+            <a href="bioskop.html" class="nav-item">
+              <i class="fas fa-film"></i> BIOSKOP
+            </a>
+            <a href="film.html" class="nav-item">
+              <i class="fas fa-play-circle"></i> FILM
+            </a>
+            <a href="food.html" class="nav-item">
+              <i class="fas fa-utensils"></i> m.food
+            </a>
+            <a href="sewa.html" class="nav-item">
+              <i class="fas fa-calendar-alt"></i> SEWA TEMPAT
+            </a>
           </div>
-          <div class="col-lg-6 mt-8 lg:mt-0">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div
-                class="feature-card bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/20 hover:transform hover:scale-105 transition-all duration-300"
-              >
-                <div class="text-red-500 text-3xl mb-4">
-                  <i class="fas fa-couch"></i>
-                </div>
-                <h3 class="text-xl font-semibold mb-2">Kursi Premium</h3>
-                <p class="text-gray-300">
-                  Kursi recliner dengan sandaran elektrik dan bantal nyaman
-                </p>
-              </div>
-              <div
-                class="feature-card bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/20 hover:transform hover:scale-105 transition-all duration-300"
-              >
-                <div class="text-red-500 text-3xl mb-4">
-                  <i class="fas fa-volume-up"></i>
-                </div>
-                <h3 class="text-xl font-semibold mb-2">Dolby Atmos</h3>
-                <p class="text-gray-300">
-                  Pengalaman suara surround yang imersif dan realistis
-                </p>
-              </div>
-              <div
-                class="feature-card bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/20 hover:transform hover:scale-105 transition-all duration-300"
-              >
-                <div class="text-red-500 text-3xl mb-4">
-                  <i class="fas fa-utensils"></i>
-                </div>
-                <h3 class="text-xl font-semibold mb-2">Food Service</h3>
-                <p class="text-gray-300">
-                  Pesan makanan dan minuman langsung ke kursi Anda
-                </p>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Search Section -->
+    <section class="search-section">
+      <div class="container">
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input
+            type="text"
+            placeholder="Cari film, bioskop, atau jadwal..."
+            class="search-input"
+            id="searchInput"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+      <div class="hero-slide active">
+        <div class="hero-content">
+          <div class="container">
+            <div class="hero-text">
+              <span class="hero-badge">NOW PLAYING</span>
+              <h2 class="hero-title">AVATAR: THE WAY OF WATER</h2>
+              <p class="hero-description">
+                Jelajahi dunia Pandora yang menakjubkan dalam petualangan epik
+                ini.
+              </p>
+              <div class="hero-actions">
+                <button class="btn-primary" onclick="buyTicket(1)">
+                  <i class="fas fa-ticket-alt"></i> BELI TIKET
+                </button>
+                <button class="btn-secondary" onclick="showTrailer()">
+                  <i class="fas fa-play"></i> TRAILER
+                </button>
               </div>
             </div>
           </div>
@@ -191,364 +92,101 @@
       </div>
     </section>
 
-    <!-- Now Playing Section -->
-    <section id="now-playing" class="py-20 bg-gray-800">
+    <!-- Main Content -->
+    <main class="main-content">
       <div class="container">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold mb-4 relative inline-block">
-            Sedang Tayang
-            <span
-              class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-red-600 rounded-full"
-            ></span>
-          </h2>
-          <p class="text-xl text-gray-400">
-            Film-film terbaik yang sedang tayang di bioskop kami
-          </p>
-        </div>
+        <!-- Now Playing Section -->
+        <section class="movie-section">
+          <div class="section-header">
+            <h3 class="section-title">
+              <i class="fas fa-fire"></i> SEDANG TAYANG
+            </h3>
+            <a href="film.html" class="see-all"
+              >LIHAT SEMUA <i class="fas fa-chevron-right"></i
+            ></a>
+          </div>
+          <div class="movie-grid" id="nowPlayingGrid">
+            <!-- Movies will be loaded by JavaScript -->
+          </div>
+        </section>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <!-- Movie 1 -->
-          <div
-            class="movie-card group bg-gray-700 rounded-2xl overflow-hidden shadow-2xl hover:transform hover:scale-105 transition-all duration-300"
-          >
-            <div class="relative overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1594909122845-11baa439b7bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="Avatar: The Way of Water"
-                class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-300"
-              />
-              <div
-                class="absolute top-4 right-4 bg-yellow-500 text-gray-900 px-3 py-1 rounded-full font-semibold text-sm"
-              >
-                <i class="fas fa-star mr-1"></i>8.1
-              </div>
+        <!-- Coming Soon Section -->
+        <section class="movie-section">
+          <div class="section-header">
+            <h3 class="section-title">
+              <i class="fas fa-clock"></i> SEGERA TAYANG
+            </h3>
+            <a href="film.html" class="see-all"
+              >LIHAT SEMUA <i class="fas fa-chevron-right"></i
+            ></a>
+          </div>
+          <div class="movie-grid" id="comingSoonGrid">
+            <!-- Movies will be loaded by JavaScript -->
+          </div>
+        </section>
+
+        <!-- Promo Section -->
+        <section class="promo-section">
+          <div class="section-header">
+            <h3 class="section-title">
+              <i class="fas fa-tags"></i> PROMO & DISCOUNT
+            </h3>
+          </div>
+          <div class="promo-grid">
+            <div class="promo-card">
+              <div class="promo-badge">HOT</div>
+              <h4>Weekend Special</h4>
+              <p>Diskon 30% setiap weekend</p>
+              <span class="promo-code">CINE30</span>
             </div>
-            <div class="p-6">
-              <h3 class="text-xl font-bold mb-2 line-clamp-2">
-                Avatar: The Way of Water
-              </h3>
-              <div
-                class="flex justify-between items-center mb-3 text-gray-400 text-sm"
-              >
-                <span>3j 12m</span>
-                <span>Action, Adventure</span>
-              </div>
-              <p class="text-gray-300 mb-4 line-clamp-3">
-                Jake Sully hidup bersama keluarga barunya di planet Pandora dan
-                menjelajahi wilayah perairannya yang menakjubkan.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span class="bg-gray-600 px-3 py-1 rounded-full text-xs"
-                  >10:00</span
-                >
-                <span class="bg-gray-600 px-3 py-1 rounded-full text-xs"
-                  >13:30</span
-                >
-                <span class="bg-red-600 px-3 py-1 rounded-full text-xs"
-                  >16:45</span
-                >
-                <span class="bg-gray-600 px-3 py-1 rounded-full text-xs"
-                  >20:00</span
-                >
-              </div>
-              <a
-                href="film.html"
-                class="w-full bg-red-600 text-white py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors block text-center"
-              >
-                Beli Tiket
-              </a>
+            <div class="promo-card">
+              <div class="promo-badge">NEW</div>
+              <h4>Student Discount</h4>
+              <p>Potongan 25% untuk pelajar</p>
+              <span class="promo-code">STUDENT25</span>
+            </div>
+            <div class="promo-card">
+              <div class="promo-badge">SPECIAL</div>
+              <h4>Family Package</h4>
+              <p>4 tiket + popcorn hanya 150rb</p>
+              <span class="promo-code">FAMILY150</span>
             </div>
           </div>
-
-          <!-- Movie 2 -->
-          <div
-            class="movie-card group bg-gray-700 rounded-2xl overflow-hidden shadow-2xl hover:transform hover:scale-105 transition-all duration-300"
-          >
-            <div class="relative overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1635805737707-575885ab0820?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="Spider-Man: No Way Home"
-                class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-300"
-              />
-              <div
-                class="absolute top-4 right-4 bg-yellow-500 text-gray-900 px-3 py-1 rounded-full font-semibold text-sm"
-              >
-                <i class="fas fa-star mr-1"></i>8.3
-              </div>
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-bold mb-2 line-clamp-2">
-                Spider-Man: No Way Home
-              </h3>
-              <div
-                class="flex justify-between items-center mb-3 text-gray-400 text-sm"
-              >
-                <span>2j 28m</span>
-                <span>Action, Fantasy</span>
-              </div>
-              <p class="text-gray-300 mb-4 line-clamp-3">
-                Peter Parker meminta bantuan Doctor Strange untuk membuat
-                identitasnya sebagai Spider-Man terlupakan.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span class="bg-gray-600 px-3 py-1 rounded-full text-xs"
-                  >11:15</span
-                >
-                <span class="bg-red-600 px-3 py-1 rounded-full text-xs"
-                  >14:30</span
-                >
-                <span class="bg-gray-600 px-3 py-1 rounded-full text-xs"
-                  >17:45</span
-                >
-                <span class="bg-gray-600 px-3 py-1 rounded-full text-xs"
-                  >21:00</span
-                >
-              </div>
-              <a
-                href="film.html"
-                class="w-full bg-red-600 text-white py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors block text-center"
-              >
-                Beli Tiket
-              </a>
-            </div>
-          </div>
-
-          <!-- Add more movie cards as needed -->
-        </div>
-
-        <div class="text-center mt-12">
-          <a
-            href="film.html"
-            class="inline-flex items-center bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors"
-          >
-            Lihat Semua Film
-            <i class="fas fa-arrow-right ml-2"></i>
-          </a>
-        </div>
+        </section>
       </div>
-    </section>
-
-    <!-- Promo Section -->
-    <section class="py-20 bg-gray-900">
-      <div class="container">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold mb-4 relative inline-block">
-            Promo Spesial
-            <span
-              class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-red-600 rounded-full"
-            ></span>
-          </h2>
-          <p class="text-xl text-gray-400">
-            Nikmati berbagai penawaran menarik dari CineMax
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div
-            class="promo-card bg-gradient-to-br from-red-600 to-red-800 p-8 rounded-2xl text-white relative overflow-hidden group hover:transform hover:scale-105 transition-all duration-300"
-          >
-            <div
-              class="absolute -right-8 -top-8 w-24 h-24 bg-white/10 rounded-full group-hover:scale-150 transition-transform duration-300"
-            ></div>
-            <h3 class="text-2xl font-bold mb-3">Hari Spesial</h3>
-            <p class="text-red-100 mb-4">
-              Diskon 30% setiap hari Selasa untuk semua tiket
-            </p>
-            <div class="bg-white/20 px-4 py-2 rounded-full inline-block mb-4">
-              <span class="font-mono font-bold">SELASA30</span>
-            </div>
-            <p class="text-sm text-red-200">Berlaku hingga 31 Desember 2023</p>
-          </div>
-
-          <div
-            class="promo-card bg-gradient-to-br from-blue-600 to-blue-800 p-8 rounded-2xl text-white relative overflow-hidden group hover:transform hover:scale-105 transition-all duration-300"
-          >
-            <div
-              class="absolute -right-8 -top-8 w-24 h-24 bg-white/10 rounded-full group-hover:scale-150 transition-transform duration-300"
-            ></div>
-            <h3 class="text-2xl font-bold mb-3">Student Discount</h3>
-            <p class="text-blue-100 mb-4">
-              Potongan 25% untuk pelajar dan mahasiswa
-            </p>
-            <div class="bg-white/20 px-4 py-2 rounded-full inline-block mb-4">
-              <span class="font-mono font-bold">STUDENT25</span>
-            </div>
-            <p class="text-sm text-blue-200">Syarat dan ketentuan berlaku</p>
-          </div>
-
-          <div
-            class="promo-card bg-gradient-to-br from-green-600 to-green-800 p-8 rounded-2xl text-white relative overflow-hidden group hover:transform hover:scale-105 transition-all duration-300"
-          >
-            <div
-              class="absolute -right-8 -top-8 w-24 h-24 bg-white/10 rounded-full group-hover:scale-150 transition-transform duration-300"
-            ></div>
-            <h3 class="text-2xl font-bold mb-3">Member Loyalty</h3>
-            <p class="text-green-100 mb-4">
-              Dapatkan 1 tiket gratis setelah 10x menonton
-            </p>
-            <div class="bg-white/20 px-4 py-2 rounded-full inline-block mb-4">
-              <span class="font-mono font-bold">LOYALTY10</span>
-            </div>
-            <p class="text-sm text-green-200">Hanya untuk member CineMax</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 py-12">
+    <footer class="footer">
       <div class="container">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div>
-            <h4 class="text-2xl font-bold text-red-600 mb-4 flex items-center">
-              <i class="fas fa-film mr-2"></i>CineMax
-            </h4>
-            <p class="text-gray-400 mb-4">
-              Bioskop premium dengan pengalaman menonton terbaik. Nikmati
-              film-film berkualitas dengan fasilitas modern.
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4><i class="fas fa-star"></i> CINESTARS</h4>
+            <p>
+              Feel the movies beyond dengan pengalaman menonton terbaik di
+              Cinestars.
             </p>
-            <div class="flex space-x-4">
-              <a
-                href="#"
-                class="text-gray-400 hover:text-red-600 transition-colors"
-              >
-                <i class="fab fa-facebook-f text-xl"></i>
-              </a>
-              <a
-                href="#"
-                class="text-gray-400 hover:text-red-600 transition-colors"
-              >
-                <i class="fab fa-twitter text-xl"></i>
-              </a>
-              <a
-                href="#"
-                class="text-gray-400 hover:text-red-600 transition-colors"
-              >
-                <i class="fab fa-instagram text-xl"></i>
-              </a>
-              <a
-                href="#"
-                class="text-gray-400 hover:text-red-600 transition-colors"
-              >
-                <i class="fab fa-youtube text-xl"></i>
-              </a>
-            </div>
           </div>
-
-          <div>
-            <h5 class="text-lg font-semibold mb-4">Menu</h5>
-            <ul class="space-y-2">
-              <li>
-                <a
-                  href="index.html"
-                  class="text-gray-400 hover:text-white transition-colors"
-                  >Beranda</a
-                >
-              </li>
-              <li>
-                <a
-                  href="film.html"
-                  class="text-gray-400 hover:text-white transition-colors"
-                  >Film</a
-                >
-              </li>
-              <li>
-                <a
-                  href="bioskop.html"
-                  class="text-gray-400 hover:text-white transition-colors"
-                  >Bioskop</a
-                >
-              </li>
-              <li>
-                <a
-                  href="food.html"
-                  class="text-gray-400 hover:text-white transition-colors"
-                  >Makanan</a
-                >
-              </li>
-              <li>
-                <a
-                  href="sewa.html"
-                  class="text-gray-400 hover:text-white transition-colors"
-                  >Sewa Tempat</a
-                >
-              </li>
-            </ul>
+          <div class="footer-section">
+            <h4>CONTACT INFO</h4>
+            <p><i class="fas fa-phone"></i> 021-1234-5678</p>
+            <p><i class="fas fa-envelope"></i> info@cinestars.com</p>
           </div>
-
-          <div>
-            <h5 class="text-lg font-semibold mb-4">Informasi</h5>
-            <ul class="space-y-2">
-              <li>
-                <a
-                  href="#"
-                  class="text-gray-400 hover:text-white transition-colors"
-                  >Tentang Kami</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="text-gray-400 hover:text-white transition-colors"
-                  >Syarat & Ketentuan</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="text-gray-400 hover:text-white transition-colors"
-                  >Kebijakan Privasi</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="text-gray-400 hover:text-white transition-colors"
-                  >Bantuan</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h5 class="text-lg font-semibold mb-4">Kontak</h5>
-            <div class="space-y-2 text-gray-400">
-              <p class="flex items-center">
-                <i class="fas fa-map-marker-alt mr-3 text-red-600"></i>
-                Jl. Cinema No. 123, Jakarta
-              </p>
-              <p class="flex items-center">
-                <i class="fas fa-phone mr-3 text-red-600"></i>
-                (021) 1234-5678
-              </p>
-              <p class="flex items-center">
-                <i class="fas fa-envelope mr-3 text-red-600"></i>
-                info@cinemax.com
-              </p>
+          <div class="footer-section">
+            <h4>FOLLOW US</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
             </div>
           </div>
         </div>
-
-        <div
-          class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center"
-        >
-          <p class="text-gray-400 mb-4 md:mb-0">
-            &copy; 2023 CineMax. All rights reserved.
-          </p>
-          <div class="flex space-x-4">
-            <span class="text-gray-400 text-sm">BCA</span>
-            <span class="text-gray-400 text-sm">Mandiri</span>
-            <span class="text-gray-400 text-sm">BNI</span>
-            <span class="text-gray-400 text-sm">Gopay</span>
-            <span class="text-gray-400 text-sm">OVO</span>
-          </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Cinestars. All rights reserved.</p>
         </div>
       </div>
     </footer>
 
-    <!-- Bootstrap JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
-    <script src="script/script.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
