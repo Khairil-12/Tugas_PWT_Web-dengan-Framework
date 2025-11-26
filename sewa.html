@@ -5,28 +5,210 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sewa Tempat - Cinestars</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <nav class="navbar">
-      <div class="nav-brand">
-        <h1>Cinestars</h1>
-      </div>
-      <div class="nav-menu">
-        <a href="index.html" class="nav-item">Home</a>
-        <a href="bioskop.html" class="nav-item">Bioskop</a>
-        <a href="film.html" class="nav-item">Film</a>
-        <a href="food.html" class="nav-item">m.food</a>
-        <a href="sewa.html" class="nav-item active">Sewa Tempat</a>
-        <a href="login.html" class="nav-item login-btn">Login</a>
-      </div>
-    </nav>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-top">
+          <div class="logo">
+            <h1><i class="fas fa-star"></i> CINESTARS</h1>
+            <span class="tagline">Feel the movies beyond</span>
+          </div>
+          <div class="user-actions">
+            <a href="login.html" class="btn-login">
+              <i class="fas fa-user"></i> LOGIN
+            </a>
+            <a href="#" class="btn-location">
+              <i class="fas fa-map-marker-alt"></i> JAKARTA
+            </a>
+          </div>
+        </div>
 
+        <nav class="navbar">
+          <div class="nav-menu">
+            <a href="index.html" class="nav-item">
+              <i class="fas fa-home"></i> HOME
+            </a>
+            <a href="bioskop.html" class="nav-item">
+              <i class="fas fa-film"></i> BIOSKOP
+            </a>
+            <a href="film.html" class="nav-item">
+              <i class="fas fa-play-circle"></i> FILM
+            </a>
+            <a href="food.html" class="nav-item">
+              <i class="fas fa-utensils"></i> m.food
+            </a>
+            <a href="sewa.html" class="nav-item active">
+              <i class="fas fa-calendar-alt"></i> SEWA TEMPAT
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
     <main class="main-content">
-      <h2>Sewa Tempat Cinestars</h2>
-      <p>Sewa bioskop kami untuk acara privat atau corporate event</p>
-      <!-- Form sewa tempat akan ditampilkan di sini -->
+      <div class="container">
+        <!-- Hero Section -->
+        <section class="hero-section">
+          <div class="hero-content">
+            <h2 class="hero-title">Sewa Tempat Cinestars</h2>
+            <p class="hero-description">
+              Nikmati pengalaman menonton eksklusif untuk acara privat,
+              corporate event, atau gathering spesial Anda
+            </p>
+          </div>
+        </section>
+
+        <!-- Package Options -->
+        <section class="movie-section">
+          <div class="section-header">
+            <h3 class="section-title">
+              <i class="fas fa-crown"></i> PAKET SEWA BIOSKOP
+            </h3>
+          </div>
+          <div class="package-grid">
+            <div class="package-card">
+              <div class="package-header">
+                <h4>Basic Package</h4>
+                <div class="package-price">Rp 5.000.000</div>
+              </div>
+              <ul class="package-features">
+                <li><i class="fas fa-check"></i> Kapasitas 50 orang</li>
+                <li><i class="fas fa-check"></i> Durasi 3 jam</li>
+                <li><i class="fas fa-check"></i> Film pilihan</li>
+                <li><i class="fas fa-times"></i> Catering</li>
+                <li><i class="fas fa-times"></i> Sound system khusus</li>
+              </ul>
+              <button class="btn-primary">PILIH PAKET</button>
+            </div>
+
+            <div class="package-card featured">
+              <div class="package-badge">POPULAR</div>
+              <div class="package-header">
+                <h4>Premium Package</h4>
+                <div class="package-price">Rp 8.000.000</div>
+              </div>
+              <ul class="package-features">
+                <li><i class="fas fa-check"></i> Kapasitas 100 orang</li>
+                <li><i class="fas fa-check"></i> Durasi 4 jam</li>
+                <li><i class="fas fa-check"></i> Film pilihan premium</li>
+                <li><i class="fas fa-check"></i> Catering standar</li>
+                <li><i class="fas fa-check"></i> Sound system khusus</li>
+              </ul>
+              <button class="btn-primary">PILIH PAKET</button>
+            </div>
+
+            <div class="package-card">
+              <div class="package-header">
+                <h4>VIP Package</h4>
+                <div class="package-price">Rp 12.000.000</div>
+              </div>
+              <ul class="package-features">
+                <li><i class="fas fa-check"></i> Kapasitas 150 orang</li>
+                <li><i class="fas fa-check"></i> Durasi 5 jam</li>
+                <li><i class="fas fa-check"></i> All movies access</li>
+                <li><i class="fas fa-check"></i> Premium catering</li>
+                <li><i class="fas fa-check"></i> Full sound system</li>
+              </ul>
+              <button class="btn-primary">PILIH PAKET</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="movie-section">
+          <div class="section-header">
+            <h3 class="section-title">
+              <i class="fas fa-envelope"></i> REQUEST PENAWARAN
+            </h3>
+          </div>
+          <div class="contact-form">
+            <form id="sewaForm">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="name">Nama Lengkap</label>
+                  <input type="text" id="name" name="name" required />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" required />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Nomor Telepon</label>
+                  <input type="tel" id="phone" name="phone" required />
+                </div>
+                <div class="form-group">
+                  <label for="company">Perusahaan/Organisasi</label>
+                  <input type="text" id="company" name="company" />
+                </div>
+                <div class="form-group full-width">
+                  <label for="event">Jenis Acara</label>
+                  <select id="event" name="event" required>
+                    <option value="">Pilih Jenis Acara</option>
+                    <option value="corporate">Corporate Event</option>
+                    <option value="birthday">Ulang Tahun</option>
+                    <option value="wedding">Pernikahan</option>
+                    <option value="gathering">Gathering</option>
+                    <option value="other">Lainnya</option>
+                  </select>
+                </div>
+                <div class="form-group full-width">
+                  <label for="message">Detail Acara</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    placeholder="Jelaskan detail acara Anda..."
+                  ></textarea>
+                </div>
+              </div>
+              <button type="submit" class="btn-primary btn-large">
+                <i class="fas fa-paper-plane"></i> KIRIM REQUEST
+              </button>
+            </form>
+          </div>
+        </section>
+      </div>
     </main>
 
-    <script src="script/script.js"></script>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4><i class="fas fa-star"></i> CINESTARS</h4>
+            <p>
+              Feel the movies beyond dengan pengalaman menonton terbaik di
+              Cinestars.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4>CONTACT INFO</h4>
+            <p><i class="fas fa-phone"></i> 021-1234-5678</p>
+            <p><i class="fas fa-envelope"></i> info@cinestars.com</p>
+          </div>
+          <div class="footer-section">
+            <h4>FOLLOW US</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Cinestars. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/sewa.js"></script>
   </body>
 </html>

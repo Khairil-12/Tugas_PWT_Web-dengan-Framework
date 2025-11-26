@@ -5,28 +5,190 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>m.food - Cinestars</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <nav class="navbar">
-      <div class="nav-brand">
-        <h1>Cinestars</h1>
-      </div>
-      <div class="nav-menu">
-        <a href="index.html" class="nav-item">Home</a>
-        <a href="bioskop.html" class="nav-item">Bioskop</a>
-        <a href="film.html" class="nav-item">Film</a>
-        <a href="food.html" class="nav-item active">m.food</a>
-        <a href="sewa.html" class="nav-item">Sewa Tempat</a>
-        <a href="login.html" class="nav-item login-btn">Login</a>
-      </div>
-    </nav>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-top">
+          <div class="logo">
+            <h1><i class="fas fa-star"></i> CINESTARS</h1>
+            <span class="tagline">Feel the movies beyond</span>
+          </div>
+          <div class="user-actions">
+            <a href="login.html" class="btn-login">
+              <i class="fas fa-user"></i> LOGIN
+            </a>
+            <a href="#" class="btn-location">
+              <i class="fas fa-map-marker-alt"></i> JAKARTA
+            </a>
+          </div>
+        </div>
 
+        <nav class="navbar">
+          <div class="nav-menu">
+            <a href="index.html" class="nav-item">
+              <i class="fas fa-home"></i> HOME
+            </a>
+            <a href="bioskop.html" class="nav-item">
+              <i class="fas fa-film"></i> BIOSKOP
+            </a>
+            <a href="film.html" class="nav-item">
+              <i class="fas fa-play-circle"></i> FILM
+            </a>
+            <a href="food.html" class="nav-item active">
+              <i class="fas fa-utensils"></i> m.food
+            </a>
+            <a href="sewa.html" class="nav-item">
+              <i class="fas fa-calendar-alt"></i> SEWA TEMPAT
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Search Section -->
+    <section class="search-section">
+      <div class="container">
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input
+            type="text"
+            placeholder="Cari makanan atau minuman..."
+            class="search-input"
+            id="searchFood"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
     <main class="main-content">
-      <h2>m.food - Catering Cinestars</h2>
-      <p>Nikmati berbagai makanan dan minuman lezat dari m.food</p>
-      <!-- Konten makanan akan ditampilkan di sini -->
+      <div class="container">
+        <!-- Hero Section -->
+        <section class="hero-section">
+          <div class="hero-content">
+            <h2 class="hero-title">m.food Catering</h2>
+            <p class="hero-description">
+              Nikmati berbagai makanan dan minuman lezat untuk menemani
+              pengalaman menonton Anda
+            </p>
+          </div>
+        </section>
+
+        <!-- Food Categories -->
+        <section class="movie-section">
+          <div class="section-header">
+            <h3 class="section-title">
+              <i class="fas fa-tags"></i> KATEGORI MAKANAN
+            </h3>
+          </div>
+          <div class="category-grid">
+            <div class="category-card active" data-category="all">
+              <i class="fas fa-th-large"></i>
+              <span>Semua</span>
+            </div>
+            <div class="category-card" data-category="popcorn">
+              <i class="fas fa-popcorn"></i>
+              <span>Popcorn</span>
+            </div>
+            <div class="category-card" data-category="drinks">
+              <i class="fas fa-cocktail"></i>
+              <span>Minuman</span>
+            </div>
+            <div class="category-card" data-category="snacks">
+              <i class="fas fa-cookie"></i>
+              <span>Snack</span>
+            </div>
+            <div class="category-card" data-category="meals">
+              <i class="fas fa-utensils"></i>
+              <span>Makanan</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Food Items -->
+        <section class="movie-section">
+          <div class="section-header">
+            <h3 class="section-title">
+              <i class="fas fa-utensils"></i> MENU m.food
+            </h3>
+          </div>
+          <div class="food-grid" id="foodGrid">
+            <!-- Food items will be loaded here -->
+          </div>
+        </section>
+
+        <!-- Promo Section -->
+        <section class="promo-section">
+          <div class="section-header">
+            <h3 class="section-title">
+              <i class="fas fa-tags"></i> PROMO m.food
+            </h3>
+          </div>
+          <div class="promo-grid">
+            <div class="promo-card">
+              <div class="promo-badge">HOT</div>
+              <h4>Combo Family</h4>
+              <p>2 Large Popcorn + 4 Regular Drinks + 2 Snacks</p>
+              <span class="promo-price">Rp 120.000</span>
+              <span class="original-price">Rp 150.000</span>
+            </div>
+            <div class="promo-card">
+              <div class="promo-badge">NEW</div>
+              <h4>Movie Night Package</h4>
+              <p>1 Large Popcorn + 2 Regular Drinks + 1 Snack</p>
+              <span class="promo-price">Rp 65.000</span>
+              <span class="original-price">Rp 80.000</span>
+            </div>
+            <div class="promo-card">
+              <div class="promo-badge">SPECIAL</div>
+              <h4>Sweet Lovers</h4>
+              <p>Caramel Popcorn + 2 Ice Cream + 2 Drinks</p>
+              <span class="promo-price">Rp 85.000</span>
+              <span class="original-price">Rp 100.000</span>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
 
-    <script src="script/script.js"></script>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4><i class="fas fa-star"></i> CINESTARS</h4>
+            <p>
+              Feel the movies beyond dengan pengalaman menonton terbaik di
+              Cinestars.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4>CONTACT INFO</h4>
+            <p><i class="fas fa-phone"></i> 021-1234-5678</p>
+            <p><i class="fas fa-envelope"></i> info@cinestars.com</p>
+          </div>
+          <div class="footer-section">
+            <h4>FOLLOW US</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Cinestars. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/food.js"></script>
   </body>
 </html>

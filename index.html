@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cinestars - Feel the movies beyond</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      .demo-notice {
+        background: linear-gradient(
+          135deg,
+          var(--primary),
+          var(--primary-light)
+        );
+        color: white;
+        padding: 1rem;
+        text-align: center;
+        border-radius: 10px;
+        margin: 1rem 0;
+        box-shadow: 0 4px 15px rgba(229, 9, 20, 0.3);
+      }
+
+      /* Additional styling for dual hero layout */
+      .hero-dual {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: stretch;
+      }
+
+      .hero-movie {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 2.5rem;
+        border-radius: 15px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        position: relative;
+        overflow: hidden;
+        min-height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .hero-movie::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(229, 9, 20, 0.1),
+          rgba(255, 159, 28, 0.1)
+        );
+        z-index: -1;
+      }
+
+      /* Hero Banner Update */
+      .hero-banner {
+        height: 70vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
+
+      /* Countdown Timer */
+      .countdown {
+        background: var(--primary);
+        color: white;
+        padding: 0.3rem 0.8rem;
+        border-radius: 15px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        display: inline-block;
+        margin-left: 0.5rem;
+      }
+
+      /* 3D Badge */
+      .badge-3d {
+        background: linear-gradient(135deg, #ff9f1c, #e84393);
+        color: white;
+        padding: 0.3rem 0.8rem;
+        border-radius: 15px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        display: inline-block;
+        margin-left: 0.5rem;
+      }
+
+      /* Responsive Hero Dual */
+      @media (max-width: 968px) {
+        .hero-dual {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+        }
+
+        .hero-movie {
+          padding: 2rem;
+          min-height: 350px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .hero-movie {
+          padding: 1.5rem;
+          min-height: 300px;
+        }
+
+        .hero-title {
+          font-size: 1.8rem;
+        }
+
+        .hero-description {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-top">
+          <div class="logo">
+            <h1><i class="fas fa-star"></i> CINESTARS</h1>
+            <span class="tagline">Feel the movies beyond</span>
+          </div>
+          <div class="user-actions">
+            <a href="login.html" class="btn-login">
+              <i class="fas fa-user"></i> LOGIN
+            </a>
+            <a href="#" class="btn-location">
+              <i class="fas fa-map-marker-alt"></i> JAKARTA
+            </a>
+          </div>
+        </div>
+
+        <nav class="navbar">
+          <div class="nav-menu">
+            <a href="index.html" class="nav-item active">
+              <i class="fas fa-home"></i> HOME
+            </a>
+            <a href="bioskop.html" class="nav-item">
+              <i class="fas fa-film"></i> BIOSKOP
+            </a>
+            <a href="film.html" class="nav-item">
+              <i class="fas fa-play-circle"></i> FILM
+            </a>
+            <a href="food.html" class="nav-item">
+              <i class="fas fa-utensils"></i> m.food
+            </a>
+            <a href="sewa.html" class="nav-item">
+              <i class="fas fa-calendar-alt"></i> SEWA TEMPAT
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Search Section -->
+    <section class="search-section">
+      <div class="container">
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input
+            type="text"
+            placeholder="Cari film, bioskop, atau jadwal..."
+            class="search-input"
+            id="searchInput"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Hero Banner dengan Landscape Images -->
+    <section class="hero-banner">
+      <div class="container">
+        <div class="hero-dual">
+          <!-- Film 1: AVATAR -->
+          <div
+            class="hero-movie"
+            style="
+              background: linear-gradient(
+                  rgba(0, 0, 0, 0.7),
+                  rgba(0, 0, 0, 0.7)
+                ),
+                url('css/pict/avatar-landscape.png') center/cover;
+            "
+          >
+            <span class="hero-badge">NOW PLAYING</span>
+            <h1 class="hero-title">AVATAR: THE WAY OF WATER</h1>
+            <p class="hero-description">
+              Jelajahi dunia Pandora yang menakjubkan dalam petualangan epik
+              ini. Rasakan pengalaman sinematik yang belum pernah ada
+              sebelumnya.
+            </p>
+            <div class="hero-actions">
+              <button class="btn-primary" onclick="buyTicket(1)">
+                <i class="fas fa-ticket-alt"></i>
+                BELI TIKET
+              </button>
+              <button class="btn-secondary" onclick="showTrailer(1)">
+                <i class="fas fa-play"></i>
+                TRAILER
+              </button>
+            </div>
+          </div>
+
+          <!-- Film 2: DUNE -->
+          <div
+            class="hero-movie"
+            style="
+              background: linear-gradient(
+                  rgba(0, 0, 0, 0.7),
+                  rgba(0, 0, 0, 0.7)
+                ),
+                url('css/pict/dune-datar.png') center/cover;
+            "
+          >
+            <span class="hero-badge">NOW PLAYING</span>
+            <h1 class="hero-title">DUNE: PART TWO</h1>
+            <p class="hero-description">
+              Lanjutan petualangan epik Paul Atreides di planet Arrakis. Perang
+              untuk masa depan alam semesta mencapai puncaknya.
+            </p>
+            <div class="hero-actions">
+              <button class="btn-primary" onclick="buyTicket(9)">
+                <i class="fas fa-ticket-alt"></i>
+                BELI TIKET
+              </button>
+              <button class="btn-secondary" onclick="showTrailer(9)">
+                <i class="fas fa-play"></i>
+                TRAILER
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="container">
+        <!-- Now Playing Section dengan Film Baru -->
+        <section class="movie-section">
+          <div class="section-header">
+            <h3 class="section-title">
+              <i class="fas fa-fire"></i> SEDANG TAYANG
+            </h3>
+            <a href="film.html" class="see-all"
+              >LIHAT SEMUA <i class="fas fa-chevron-right"></i
+            ></a>
+          </div>
+          <div class="movie-grid">
+            <!-- Film 1: AGAK LAEN -->
+            <div class="movie-card">
+              <div class="movie-poster">
+                <img
+                  src="https://via.placeholder.com/300x450/00cec9/ffffff?text=AGAK+LAEN"
+                  alt="AGAK LAEN"
+                  class="movie-image"
+                />
+                <div class="movie-status">SEDANG TAYANG</div>
+                <div class="movie-duration">1h 59m</div>
+              </div>
+              <div class="movie-info">
+                <h4 class="movie-title">AGAK LAEN</h4>
+                <p class="movie-genre">Comedy, Drama</p>
+                <div class="movie-rating">
+                  <span class="rating">
+                    <i class="fas fa-star"></i> 8.2/10
+                  </span>
+                  <span class="duration">Rp 20.000</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Film 2: RIBA -->
+            <div class="movie-card">
+              <div class="movie-poster">
+                <img
+                  src="https://via.placeholder.com/300x450/d63031/ffffff?text=RIBA"
+                  alt="RIBA"
+                  class="movie-image"
+                />
+                <div class="movie-status">SEDANG TAYANG</div>
+                <div class="movie-duration">1h 35m</div>
+              </div>
+              <div class="movie-info">
+                <h4 class="movie-title">RIBA</h4>
+                <p class="movie-genre">Drama, Thriller</p>
+                <div class="movie-rating">
+                  <span class="rating">
+                    <i class="fas fa-star"></i> 7.8/10
+                  </span>
+                  <span class="duration">Rp 20.000</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Film 3: LEGENDA KELAM MALIN KUNDANG -->
+            <div class="movie-card">
+              <div class="movie-poster">
+                <img
+                  src="https://via.placeholder.com/300x450/2d3436/ffffff?text=MALIN+KUNDANG"
+                  alt="LEGENDA KELAM MALIN KUNDANG"
+                  class="movie-image"
+                />
+                <div class="movie-status">SEDANG TAYANG</div>
+                <div class="movie-duration">1h 39m</div>
+              </div>
+              <div class="movie-info">
+                <h4 class="movie-title">LEGENDA KELAM MALIN KUNDANG</h4>
+                <p class="movie-genre">Horror, Folklore</p>
+                <div class="movie-rating">
+                  <span class="rating">
+                    <i class="fas fa-star"></i> 7.5/10
+                  </span>
+                  <span class="duration">Rp 20.000</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Film 4: AIR MATA MUALAF -->
+            <div class="movie-card">
+              <div class="movie-poster">
+                <img
+                  src="https://via.placeholder.com/300x450/0984e3/ffffff?text=AIR+MATA+MUALAF"
+                  alt="AIR MATA MUALAF"
+                  class="movie-image"
+                />
+                <div class="movie-status">SEDANG TAYANG</div>
+                <div class="movie-duration">1h 51m</div>
+              </div>
+              <div class="movie-info">
+                <h4 class="movie-title">AIR MATA MUALAF</h4>
+                <p class="movie-genre">Drama, Religion</p>
+                <div class="movie-rating">
+                  <span class="rating">
+                    <i class="fas fa-star"></i> 8.1/10
+                  </span>
+                  <span class="duration">Rp 20.000</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Film 5: ZOOTOPIA 2 -->
+            <div class="movie-card">
+              <div class="movie-poster">
+                <img
+                  src="https://via.placeholder.com/300x450/00b894/ffffff?text=ZOOTOPIA+2"
+                  alt="ZOOTOPIA 2"
+                  class="movie-image"
+                />
+                <div class="movie-status">SEDANG TAYANG</div>
+                <div class="movie-duration">1h 48m</div>
+              </div>
+              <div class="movie-info">
+                <h4 class="movie-title">ZOOTOPIA 2</h4>
+                <p class="movie-genre">Animation, Adventure</p>
+                <div class="movie-rating">
+                  <span class="rating">
+                    <i class="fas fa-star"></i> 8.5/10
+                  </span>
+                  <span class="duration"
+                    >Rp 20.000 <span class="badge-3d">3D</span></span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Film 6: WICKED: FOR GOOD -->
+            <div class="movie-card">
+              <div class="movie-poster">
+                <img
+                  src="https://via.placeholder.com/300x450/e84393/ffffff?text=WICKED+FOR+GOOD"
+                  alt="WICKED: FOR GOOD"
+                  class="movie-image"
+                />
+                <div class="movie-status">SEDANG TAYANG</div>
+                <div class="movie-duration">2h 17m</div>
+              </div>
+              <div class="movie-info">
+                <h4 class="movie-title">WICKED: FOR GOOD</h4>
+                <p class="movie-genre">Musical, Fantasy</p>
+                <div class="movie-rating">
+                  <span class="rating">
+                    <i class="fas fa-star"></i> 8.3/10
+                  </span>
+                  <span class="duration">Rp 20.000</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Film 7: SAMPAI TITIK TERAKHIRMU -->
+            <div class="movie-card">
+              <div class="movie-poster">
+                <img
+                  src="https://via.placeholder.com/300x450/6c5ce7/ffffff?text=SAMPAI+TITIK+TERAKHIR"
+                  alt="SAMPAI TITIK TERAKHIRMU"
+                  class="movie-image"
+                />
+                <div class="movie-status">SEDANG TAYANG</div>
+                <div class="movie-duration">1h 54m</div>
+              </div>
+              <div class="movie-info">
+                <h4 class="movie-title">SAMPAI TITIK TERAKHIRMU</h4>
+                <p class="movie-genre">Drama, Romance</p>
+                <div class="movie-rating">
+                  <span class="rating">
+                    <i class="fas fa-star"></i> 7.9/10
+                  </span>
+                  <span class="duration">Rp 20.000</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Film 8: NOW YOU SEE ME: NOW YOU DON'T -->
+            <div class="movie-card">
+              <div class="movie-poster">
+                <img
+                  src="https://via.placeholder.com/300x450/fdcb6e/000000?text=NOW+YOU+SEE+ME+3"
+                  alt="NOW YOU SEE ME: NOW YOU DON'T"
+                  class="movie-image"
+                />
+                <div class="movie-status">SEDANG TAYANG</div>
+                <div class="movie-duration">1h 52m</div>
+              </div>
+              <div class="movie-info">
+                <h4 class="movie-title">NOW YOU SEE ME: NOW YOU DON'T</h4>
+                <p class="movie-genre">Action, Mystery</p>
+                <div class="movie-rating">
+                  <span class="rating">
+                    <i class="fas fa-star"></i> 8.0/10
+                  </span>
+                  <span class="duration">Rp 20.000</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Coming Soon Section dengan Film Baru -->
+        <section class="movie-section">
+          <div class="section-header">
+            <h3 class="section-title">
+              <i class="fas fa-clock"></i> SEGERA TAYANG
+            </h3>
+            <a href="film.html" class="see-all"
+              >LIHAT SEMUA <i class="fas fa-chevron-right"></i
+            ></a>
+          </div>
+          <div class="movie-grid">
+            <!-- Film 1: DHURANDHAR -->
+            <div class="movie-card">
+              <div class="movie-poster">
+                <img
+                  src="https://via.placeholder.com/300x450/667eea/ffffff?text=DHURANDHAR"
+                  alt="DHURANDHAR"
+                  class="movie-image"
+                />
+                <div class="movie-status coming-soon">SEGERA TAYANG</div>
+                <div class="movie-duration">December 05</div>
+              </div>
+              <div class="movie-info">
+                <h4 class="movie-title">DHURANDHAR</h4>
+                <p class="movie-genre">Action, Drama</p>
+                <div class="movie-rating">
+                  <span class="release-date"
+                    >Rp 20.000 <span class="countdown">In 29m</span></span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Film 2: SSU: ROAD TO REVENGE -->
+            <div class="movie-card">
+              <div class="movie-poster">
+                <img
+                  src="https://via.placeholder.com/300x450/ff6b6b/ffffff?text=SSU+ROAD+TO+REVENGE"
+                  alt="SSU: ROAD TO REVENGE"
+                  class="movie-image"
+                />
+                <div class="movie-status coming-soon">SEGERA TAYANG</div>
+                <div class="movie-duration">December 06</div>
+              </div>
+              <div class="movie-info">
+                <h4 class="movie-title">SSU: ROAD TO REVENGE</h4>
+                <p class="movie-genre">Action, Thriller</p>
+                <div class="movie-rating">
+                  <span class="release-date"
+                    >Rp 20.000 <span class="countdown">In 29m</span></span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Film 3: DEAD OF WINTER -->
+            <div class="movie-card">
+              <div class="movie-poster">
+                <img
+                  src="https://via.placeholder.com/300x450/2d3436/ffffff?text=DEAD+OF+WINTER"
+                  alt="DEAD OF WINTER"
+                  class="movie-image"
+                />
+                <div class="movie-status coming-soon">SEGERA TAYANG</div>
+                <div class="movie-duration">December 10</div>
+              </div>
+              <div class="movie-info">
+                <h4 class="movie-title">DEAD OF WINTER</h4>
+                <p class="movie-genre">Horror, Thriller</p>
+                <div class="movie-rating">
+                  <span class="release-date"
+                    >Rp 20.000 <span class="countdown">In 38m</span></span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Film 4: SCARLET -->
+            <div class="movie-card">
+              <div class="movie-poster">
+                <img
+                  src="https://via.placeholder.com/300x450/e84393/ffffff?text=SCARLET"
+                  alt="SCARLET"
+                  class="movie-image"
+                />
+                <div class="movie-status coming-soon">SEGERA TAYANG</div>
+                <div class="movie-duration">December 10</div>
+              </div>
+              <div class="movie-info">
+                <h4 class="movie-title">SCARLET</h4>
+                <p class="movie-genre">Drama, Romance</p>
+                <div class="movie-rating">
+                  <span class="release-date"
+                    >Rp 20.000 <span class="countdown">In 51m</span></span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Film 5: MENGEJAR RESTU -->
+            <div class="movie-card">
+              <div class="movie-poster">
+                <img
+                  src="https://via.placeholder.com/300x450/00b894/ffffff?text=MENGEJAR+RESTU"
+                  alt="MENGEJAR RESTU"
+                  class="movie-image"
+                />
+                <div class="movie-status coming-soon">SEGERA TAYANG</div>
+                <div class="movie-duration">December 11</div>
+              </div>
+              <div class="movie-info">
+                <h4 class="movie-title">MENGEJAR RESTU</h4>
+                <p class="movie-genre">Drama, Family</p>
+                <div class="movie-rating">
+                  <span class="release-date">Rp 20.000</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Film 6: THE CARPENTERS SON -->
+            <div class="movie-card">
+              <div class="movie-poster">
+                <img
+                  src="https://via.placeholder.com/300x450/fdcb6e/000000?text=THE+CARPENTERS+SON"
+                  alt="THE CARPENTERS SON"
+                  class="movie-image"
+                />
+                <div class="movie-status coming-soon">SEGERA TAYANG</div>
+                <div class="movie-duration">December 12</div>
+              </div>
+              <div class="movie-info">
+                <h4 class="movie-title">THE CARPENTERS SON</h4>
+                <p class="movie-genre">Drama, Inspirational</p>
+                <div class="movie-rating">
+                  <span class="release-date">Rp 20.000</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Film 7: TIMUR -->
+            <div class="movie-card">
+              <div class="movie-poster">
+                <img
+                  src="https://via.placeholder.com/300x450/0984e3/ffffff?text=TIMUR"
+                  alt="TIMUR"
+                  class="movie-image"
+                />
+                <div class="movie-status coming-soon">SEGERA TAYANG</div>
+                <div class="movie-duration">December 13</div>
+              </div>
+              <div class="movie-info">
+                <h4 class="movie-title">TIMUR</h4>
+                <p class="movie-genre">Action, Adventure</p>
+                <div class="movie-rating">
+                  <span class="release-date">Rp 20.000</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Promo Section -->
+        <section class="promo-section">
+          <div class="container">
+            <div class="section-header">
+              <h3 class="section-title">
+                <i class="fas fa-tags"></i> PROMO & COMING SOON
+              </h3>
+            </div>
+            <div class="promo-grid">
+              <!-- Iklan Makanan 1 -->
+              <div class="promo-card">
+                <div class="promo-badge">m.food SPECIAL</div>
+                <h4>COMBO HAPPY MEAL</h4>
+                <p>Popcorn Besar + Coke Regular + Nachos</p>
+                <div class="promo-code">HAPPYMEAL45</div>
+                <p><strong>Hanya Rp 45.000</strong></p>
+                <button
+                  class="btn-primary"
+                  onclick="showNotification('Combo Happy Meal ditambahkan ke keranjang!', 'success')"
+                >
+                  <i class="fas fa-shopping-cart"></i>
+                  PESAN SEKARANG
+                </button>
+              </div>
+
+              <!-- Film Coming Soon 2025 1 -->
+              <div class="promo-card">
+                <div class="promo-badge">COMING 2025</div>
+                <h4>AVENGERS: THE KANG DYNASTY</h4>
+                <p>
+                  Petualangan epik baru para Avengers melawan Kang sang
+                  Conqueror
+                </p>
+                <button class="btn-secondary" onclick="addToWaitlist(99)">
+                  <i class="fas fa-bell"></i>
+                  INGATKAN SAYA
+                </button>
+              </div>
+
+              <!-- Iklan Makanan 2 -->
+              <div class="promo-card">
+                <div class="promo-badge">LIMITED OFFER</div>
+                <h4>MOVIE NIGHT DEAL</h4>
+                <p>2 Popcorn + 2 Soft Drinks + 1 Hot Dog</p>
+                <div class="promo-code">MOVIENIGHT75</div>
+                <p><strong>Rp 75.000</strong></p>
+                <button
+                  class="btn-primary"
+                  onclick="showNotification('Movie Night Deal ditambahkan ke keranjang!', 'success')"
+                >
+                  <i class="fas fa-bolt"></i>
+                  GRAB THIS DEAL
+                </button>
+              </div>
+
+              <!-- Film Coming Soon 2025 2 -->
+              <div class="promo-card">
+                <div class="promo-badge">JANUARY 2025</div>
+                <h4>SUPERMAN: LEGACY</h4>
+                <p>
+                  Kembalinya Superman dalam petualangan baru yang spektakuler
+                </p>
+                <button class="btn-secondary" onclick="addToWaitlist(100)">
+                  <i class="fas fa-heart"></i>
+                  + WISHLIST
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4><i class="fas fa-star"></i> CINESTARS</h4>
+            <p>
+              Feel the movies beyond dengan pengalaman menonton terbaik di
+              Cinestars.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4>CONTACT INFO</h4>
+            <p><i class="fas fa-phone"></i> 021-1234-5678</p>
+            <p><i class="fas fa-envelope"></i> info@cinestars.com</p>
+          </div>
+          <div class="footer-section">
+            <h4>FOLLOW US</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Cinestars. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -5,37 +5,150 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bioskop - Cinestars</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <nav class="navbar">
-      <div class="nav-brand">
-        <h1>Cinestars</h1>
-      </div>
-      <div class="nav-menu">
-        <a href="index.html" class="nav-item">Home</a>
-        <a href="bioskop.html" class="nav-item active">Bioskop</a>
-        <a href="film.html" class="nav-item">Film</a>
-        <a href="food.html" class="nav-item">m.food</a>
-        <a href="sewa.html" class="nav-item">Sewa Tempat</a>
-        <a href="login.html" class="nav-item login-btn">Login</a>
-      </div>
-    </nav>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-top">
+          <div class="logo">
+            <h1><i class="fas fa-star"></i> CINESTARS</h1>
+            <span class="tagline">Feel the movies beyond</span>
+          </div>
+          <div class="user-actions">
+            <a href="login.html" class="btn-login">
+              <i class="fas fa-user"></i> LOGIN
+            </a>
+            <a href="#" class="btn-location">
+              <i class="fas fa-map-marker-alt"></i> JAKARTA
+            </a>
+          </div>
+        </div>
 
-    <div class="search-container">
-      <input
-        type="text"
-        placeholder="Cari bioskop terdekat..."
-        class="search-input"
-      />
-    </div>
+        <nav class="navbar">
+          <div class="nav-menu">
+            <a href="index.html" class="nav-item">
+              <i class="fas fa-home"></i> HOME
+            </a>
+            <a href="bioskop.html" class="nav-item active">
+              <i class="fas fa-film"></i> BIOSKOP
+            </a>
+            <a href="film.html" class="nav-item">
+              <i class="fas fa-play-circle"></i> FILM
+            </a>
+            <a href="food.html" class="nav-item">
+              <i class="fas fa-utensils"></i> m.food
+            </a>
+            <a href="sewa.html" class="nav-item">
+              <i class="fas fa-calendar-alt"></i> SEWA TEMPAT
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
 
+    <!-- Search Section -->
+    <section class="search-section">
+      <div class="container">
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input
+            type="text"
+            placeholder="Cari bioskop terdekat..."
+            class="search-input"
+            id="searchBioskop"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
     <main class="main-content">
-      <h2>Daftar Bioskop Cinestars</h2>
-      <div class="cinema-list">
-        <!-- Daftar bioskop akan ditampilkan di sini -->
+      <div class="container">
+        <!-- Hero Section -->
+        <section class="hero-section">
+          <div class="hero-content">
+            <h2 class="hero-title">Cari Bioskop Terdekat</h2>
+            <p class="hero-description">
+              Temukan pengalaman menonton terbaik di bioskop Cinestars terdekat
+            </p>
+          </div>
+        </section>
+
+        <!-- Bioskop List -->
+        <section class="movie-section">
+          <div class="section-header">
+            <h3 class="section-title">
+              <i class="fas fa-map-marker-alt"></i> BIOSKOP CINESTARS
+            </h3>
+            <div class="filter-options">
+              <select class="filter-select" id="cityFilter">
+                <option value="">Semua Kota</option>
+                <option value="jakarta">Jakarta</option>
+                <option value="bandung">Bandung</option>
+                <option value="surabaya">Surabaya</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="bioskop-grid" id="bioskopGrid">
+            <!-- Bioskop cards will be loaded here -->
+          </div>
+        </section>
+
+        <!-- Now Playing in Bioskop -->
+        <section class="movie-section">
+          <div class="section-header">
+            <h3 class="section-title">
+              <i class="fas fa-fire"></i> SEDANG TAYANG
+            </h3>
+            <a href="film.html" class="see-all"
+              >LIHAT SEMUA <i class="fas fa-chevron-right"></i
+            ></a>
+          </div>
+          <div class="movie-grid" id="nowPlayingGrid">
+            <!-- Movies will be loaded by JavaScript -->
+          </div>
+        </section>
       </div>
     </main>
 
-    <script src="script/script.js"></script>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4><i class="fas fa-star"></i> CINESTARS</h4>
+            <p>
+              Feel the movies beyond dengan pengalaman menonton terbaik di
+              Cinestars.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4>CONTACT INFO</h4>
+            <p><i class="fas fa-phone"></i> 021-1234-5678</p>
+            <p><i class="fas fa-envelope"></i> info@cinestars.com</p>
+          </div>
+          <div class="footer-section">
+            <h4>FOLLOW US</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Cinestars. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/bioskop.js"></script>
   </body>
 </html>
